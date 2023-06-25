@@ -2,9 +2,11 @@
 // @routes   Get /spi/v1/bootcamps/:id
 // @access   Public
 exports.getBootcamps = (req, res, next) => {
-  res
-    .status(200)
-    .json({ success: true, msg: `show specific bootcamp ${req.params.id}` });
+  res.status(200).json({
+    success: true,
+    msg: `show specific bootcamp ${req.params.id}`,
+    hello: req.hello,
+  });
 };
 
 // @desc     Create
